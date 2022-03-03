@@ -31,8 +31,8 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build-ci # will run `yarn build` command
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.2.5
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
