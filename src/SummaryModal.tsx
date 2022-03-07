@@ -159,11 +159,11 @@ function Share({ tries, word }: { word: string; tries: string[] }) {
 
   const data = {
     url: window.location.href,
-    text: `Ordla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}:
+    text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}:
 
 ${resultsString}
 `,
-    title: "Ordla",
+    title: "dOrdla",
   };
 
   const [copied, setCopied] = useState(false);

@@ -90,7 +90,7 @@ export function App() {
           />
         )}
       </Fade>
-      <h2>Ordla</h2>
+      <h2>dOrdla</h2>
       <Tries word={word} tries={tries} currentTry={currentTry} />
       {hasWon || hasLost ? (
         <ResultsLink onPress={() => setShowModal(true)} />

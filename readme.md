@@ -1,3 +1,3 @@
-# Ordla
+# dOrdla
 
-Basically a swedish version of Wordle. Feel free to contribute.
+Samma som [riktiga Ordla](https://eldh.github.io/ordla/) fast med fler konstiga ord och namn.
