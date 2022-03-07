@@ -162,6 +162,8 @@ function Share({ tries, word }: { word: string; tries: string[] }) {
     text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}:
 
 ${resultsString}
+
+https://denizdogan.github.io/ordla/
 `,
     title: "dOrdla",
   };
