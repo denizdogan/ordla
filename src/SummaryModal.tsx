@@ -159,7 +159,7 @@ function Share({ tries, word }: { word: string; tries: string[] }) {
 
   const data = {
     url: window.location.href,
-    text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}:
+    text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}, ${tries.length}/6:
 
 ${resultsString}
 `,
