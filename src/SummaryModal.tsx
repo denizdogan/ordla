@@ -8,11 +8,13 @@ export function SummaryModal({
   onClose,
   tries,
   word,
+  hasLost,
 }: {
   onClose(): void;
   className: string;
   tries: string[];
   word: string;
+  hasLost: boolean;
 }) {
   const [results] = usePersistedState<Record<string, number>>("results", {});
 
@@ -64,7 +66,7 @@ export function SummaryModal({
         </div>
         <div className="row gap-l" style={{ marginTop: "36px", gap: "56px" }}>
           <Next />
-          <Share word={word} tries={tries} />
+          <Share hasLost={hasLost} word={word} tries={tries} />
         </div>
       </div>
       <div className={"modal-bg " + className} />
@@ -136,7 +138,7 @@ function Next() {
     </div>
   );
 }
-function Share({ tries, word }: { word: string; tries: string[] }) {
+function Share({ hasLost, tries, word }: { hasLost: boolean; word: string; tries: string[] }) {
   let resultsString = tries
     .map((t) =>
       t
@@ -157,9 +159,10 @@ function Share({ tries, word }: { word: string; tries: string[] }) {
     )
     .join("\n");
 
-  const data = {
+    let score = hasLost ? "X" : tries.length;
+    const data = {
     url: window.location.href,
-    text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}, ${tries.length}/6:
+    text: `dOrdla, ${new Date().getDate()} ${monthStr(new Date().getMonth())}, ${score}/6:
 
 ${resultsString}
 `,

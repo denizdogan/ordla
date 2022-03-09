@@ -86,6 +86,7 @@ export function App() {
             tries={tries}
             word={word}
             className={c}
+            hasLost={hasLost}
             onClose={() => setShowModal(false)}
           />
         )}
